@@ -4,6 +4,7 @@ const express = require('express');
 const server = express();
 const port = process.env.PORT || 3000;
 const cors = require('cors');
+server.use(cors());
 
 router(server);
 
@@ -14,7 +15,7 @@ server.get('/', function (req: any, res: any) {
 });
 server.use('/', express.static(publicFolder));
 
-server.use(cors());
+
 
 server.listen(port, () => {
 
