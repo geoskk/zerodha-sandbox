@@ -5,7 +5,6 @@ const server = express();
 const port = process.env.PORT || 3000;
 const cors = require('cors');
 server.use(cors());
-
 router(server);
 
 const path = require('path');
